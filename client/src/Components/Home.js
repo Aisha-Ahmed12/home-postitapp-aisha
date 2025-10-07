@@ -8,19 +8,32 @@ const Home = () => {
   return (
     <>
       <Row>
+
         <Col md={3}>
+
           <User />
+
         </Col>
+
         <Col md={9}>
+
           <SharePosts />
+
         </Col>
+
       </Row>
-      <Row>
-        <Col md={3}></Col>
-        <Col md={9}>
-          <Posts />
-        </Col>
-      </Row>
+
+       <Row>
+
+         <Col md={3}></Col>
+
+         <Col md={9}>
+ 
+            <Posts />
+
+         </Col>
+
+       </Row>
     </>
   );
 };

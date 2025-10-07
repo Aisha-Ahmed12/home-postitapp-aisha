@@ -1,13 +1,5 @@
-import {
-  Butto,
-  Col,
-  Label,
-  Container,
-  Row,
-  FormGroup,
-  Input,
-  Button,
-} from "reactstrap";
+import { Button, Col, Container, Row, Input } from "reactstrap";
+
 const SharePosts = () => {
   return (
     <Container>
@@ -16,9 +8,10 @@ const SharePosts = () => {
           <Input
             id="share"
             name="share"
-            placeholder="Share your thouts..."
+            placeholder="Share your thoughts..."
             type="textarea"
           />
+
           <Button>PostIT</Button>
         </Col>
       </Row>

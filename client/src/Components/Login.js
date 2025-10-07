@@ -1,45 +1,63 @@
-import { Container, Form, Input, Row, Col, Label, Button } from "reactstrap";
-import logo from "../Images/loginImage.jpg";
+import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from "reactstrap"; //import the Reactstrap Components
+import "../App.css";
 import { Link } from "react-router-dom";
+import login from "../Images/loginImage.jpg";
 const Login = () => {
   return (
     <div>
+      {/* <h1>Login</h1>
+    <img src={login} className="loginsmall"/> */}
       <Container>
         <Form>
           <Row>
-            <Label for="email">Email</Label>
             <Col md={3}>
-              <Input
-                id="emaile"
-                name="email"
-                placeholder="Enter email..."
-                type="email"
-              />
-            </Col>
-          </Row>
-          <Label for="password">Password</Label>
-          <Row>
-            <Col md={3}>
-              <Input
-                id="password"
-                name="password"
-                placeholder="Enter password..."
-                type="password"
-              />
+              <p>Email</p>
+              <FormGroup floating>
+                <Input
+                  id="exampleEmail"
+                  name="email"
+                  placeholder="Email"
+                  type="email"
+                />
+                <Label for="exampleEmail">
+                  Email
+                </Label>
+              </FormGroup>
             </Col>
           </Row>
           <Row>
             <Col md={3}>
-              <br></br>
-              <Button>Login</Button>
-              <p className="smalltext">
-                No Account?<Link to="/Register">Sign Up Now</Link>
-              </p>
+              <p>Password:</p>
+              <FormGroup floating>
+                <Input
+                  id="examplePassword"
+                  name="password"
+                  placeholder="Password"
+                  type="password"
+                />
+                <Label for="examplePassword">
+                  Password
+                </Label>
+              </FormGroup>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={3}>
+              {' '}
+              <Button>
+                Login
+              </Button>
             </Col>
           </Row>
         </Form>
       </Container>
+      <p className="smalltext">
+
+        No Account? <Link to="/register">Sign Up now.</Link>
+
+      </p>
     </div>
+
   );
 };
 

@@ -1,12 +1,12 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { Container, Row } from "reactstrap";
 import Footer from "./Components/Footer";
-import Profile from "./Components/Profile";
 import Header from "./Components/Header";
+import Home from "./Components/Home";
 import Login from "./Components/Login";
 import Register from "./Components/Register";
-import Home from "./Components/Home";
+import Profile from "./Components/Profile";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Row } from "reactstrap"; //import the Reactstrap
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -16,14 +16,16 @@ const App = () => {
         <Row>
           <Header />
         </Row>
+
         <Row className="main">
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path="/Login" element={<Login />}></Route>
-            <Route path="/Profile" element={<Profile />}></Route>
-            <Route path="/Register" element={<Register />}></Route>
+            <Route path="/login" element={<Login />}></Route>
+            <Route path="/profile" element={<Profile />}></Route>
+            <Route path="/register" element={<Register />}></Route>
           </Routes>
         </Row>
+
         <Row>
           <Footer />
         </Row>

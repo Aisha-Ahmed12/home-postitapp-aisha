@@ -1,26 +1,52 @@
-import { Navbar, Nav, NavItem, NavLink } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Navbar, Nav, NavItem, NavLink, } from "reactstrap";
 import logo from "../Images/logo-t.png";
+import { Link } from "react-router-dom";
+
 const Header = () => {
+
   return (
     <>
-      <Navbar>
+
+      <Navbar className="header"> {/*step number 15*/}
+
         <Nav>
-          <img src={logo} />
+
           <NavItem>
-            <Link to="/">Home</Link>
+            <img src={logo} /> {/*  /> we add navitem for the logo */}
+          </NavItem>
+
+          <NavItem>
+
+            <NavLink active href="#">
+
+              <Link to="#">Home</Link>
+
+            </NavLink>
+
           </NavItem>
           <NavItem>
-            <Link to="/Login">Login</Link>
+
+            <NavLink href="/Login">Login</NavLink>
+
           </NavItem>
+
+
           <NavItem>
-            <Link to="Profile">Profile</Link>
+
+            <NavLink href="#">Profile</NavLink>
+
           </NavItem>
+
           <NavItem>
-            <Link to="Logout">Logout</Link>
+
+            <NavLink href="#">Logout</NavLink>
+
           </NavItem>
+
         </Nav>
+
       </Navbar>
+
     </>
   );
 };
